@@ -1,0 +1,16 @@
+<ion-view view-title="Items List">
+<!--<!---This page displays the main categories. Extracted from list.categories DB->--> 
+  <ion-content>
+    <p>{{catFiltText}}</p>
+    <ion-list>
+     <ion-item ng-repeat="item in items  | filter:{Category: catFiltText} " 
+        href="#/app/item"  ng-click= "selectItem(item.id)" class="item-thumbnail-left">
+        <img ng-src="{{baseURL+'/public/'+item.Image}}">
+        <!--<button ng-click="select(category.id)" ></button>-->
+        <h2>{{item.Price}}
+        <h2>{{item.Category}}
+        <p>{{item.Tags}}</p>
+      </ion-item>
+    </ion-list>  
+  </ion-content>
+</ion-view>

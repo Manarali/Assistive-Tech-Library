@@ -1,0 +1,49 @@
+<ion-view view-title="item">
+<!--<!---This page displays the main categories. Extracted from list.categories DB->--> 
+  <ion-content>
+    <!--<p>{{catFiltText}}/{{selectedItem."SubCategory"}}</p>-->
+      <div class="card" >
+        <div class="item item-body item-image">
+          <!--<div class="item item-body item-image">-->
+              <img class="full-image" ng-src="{{baseURL+'/public/'+selectedItem.Image}}">                                           
+          <!--</div>-->
+         </div>
+          <div class="item item-divider item-text-wrap">   
+              <!--<label class="input-label" class="item" >-->
+                  <p >Name: {{selectedItem.Devices}}</p>
+                  <p >Price: {{selectedItem.Price}}</p>
+                  <p >Manufacturer: {{selectedItem.Manufacturer}}</p>
+                  <!--<p >Link: </p><p href="{{selectedItem.Link}}"></p>-->
+                  <p>Link:
+                    <a href="{{selectedItem.Link}}">{{selectedItem.Link}}</a>
+                  </p>
+                  <p >Details: {{selectedItem.Description}}</p>
+                
+              <!--</label>-->
+          </<div>
+                                                          
+</div>
+        <div >
+            <div class="col col-offset-5">
+                   <h4>Customer Comments &nbsp;&nbsp;&nbsp;</h4>
+                    <ul class="list">
+                        <li >
+                          <blockquote>
+                             <p>4 Stars</p>
+                             <p>Test Mode</p>
+                             <footer>Manar, {{2016-06-06 | date:'MMM. dd, yyyy'}}</footer>
+                          </blockquote>
+                          <blockquote>
+                             <p>4 Stars</p>
+                             <p>Test Mode</p>
+                             <footer>Manar, {{2016-06-06 | date:'MMM. dd, yyyy'}}</footer>
+                          </blockquote>
+                        </li>
+                    </ul>
+            </div>
+      </div>
+
+  </ion-content>
+</ion-view>
+
+      
